@@ -1,0 +1,92 @@
+{
+  "position": "top",
+  "modules-left": ["hyprland/workspaces", "cpu", "temperature", "memory"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["network", "custom/vpn","bluetooth", "pulseaudio", "battery", "clock"],
+
+  "cpu": {
+    "interval": 3,
+    "format": "  {usage}%",
+    "tooltip": "{usage}",
+    "on-click": "kitty htop"
+  },
+
+  "temperature": {
+    "interval": 3,
+    "thermal-zone": 7,
+    "critical-threshold": 80,
+    "format-critical": " {temperatureC}°C",
+    "format": " {temperatureC}°C",
+    "on-click": "kitty htop"
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": "  {percentage}%",
+    "max-length": 10,
+    "on-click": "kitty htop"
+  }, 
+
+  "clock": {
+    "format": "   {:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "format": "{icon}  {capacity}%",
+    "format-warning": "{icon}  {capacity}%",
+    "format-critical": "{icon}  {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    "format-full": "  {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}"
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "format-disconnected": "󰤭 ",
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "kitty nmtui"
+  },
+
+  "bluetooth": { 
+    "format-disabled": " off",
+    "format-disconnected": "",
+    "format-connected": " {device_alias}",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "blueman-manager",
+    "interval": 3
+  },
+
+  "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-muted": " ",
+      "format-icons": {
+          "default": ["", "", " "]
+      },
+      "on-click": "pavucontrol"
+  },
+
+  "custom/vpn": {
+    "exec": "~/.config/waybar/vpn_module.sh",
+    "interval": 3,
+    "return-type": "json",
+    "format": "🛡  {}",
+    "tooltip": true,
+  }
+}

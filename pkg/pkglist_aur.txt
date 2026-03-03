@@ -1,0 +1,9 @@
+catppuccin-gtk-theme-mocha
+neofetch
+pyhoca-cli
+pyhoca-gui
+visual-studio-code-bin
+yay
+yay-debug
+zoom
+zotero-bin
