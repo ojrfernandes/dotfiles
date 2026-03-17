@@ -26,4 +26,4 @@ if pgrep vpnc > /dev/null; then
 fi
 
 # --- DISCONNECTED ---
-echo "{\"text\":\"No VPN\", \"tooltip\":\"VPN Disconnected\", \"class\":\"disconnected\"}"
+echo "{\"text\":\"OFF\",\"tooltip\":\"VPN Disconnected\", \"class\":\"disconnected\"}"

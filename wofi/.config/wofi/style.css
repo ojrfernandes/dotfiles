@@ -60,9 +60,10 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 2px solid @lavender;
+  border: 2px solid @red;
   border-radius: 8px;
   background-color: @base;
+  opacity: 0.9;
 }
 
 /* Inner Box */

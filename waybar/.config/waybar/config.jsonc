@@ -1,8 +1,11 @@
 {
   "position": "top",
+  "margin-top": 10,
+  "margin-left": 20,
+  "margin-right": 20,
   "modules-left": ["hyprland/workspaces", "cpu", "temperature", "memory"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "custom/vpn","bluetooth", "pulseaudio", "battery", "clock"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "custom/vpn", "bluetooth", "pulseaudio", "battery"],
 
   "cpu": {
     "interval": 3,
@@ -21,7 +24,7 @@
   },
 
   "memory": {
-    "interval": 30,
+    "interval": 3,
     "format": "  {percentage}%",
     "max-length": 10,
     "on-click": "kitty htop"
@@ -44,8 +47,8 @@
     "format-plugged": "  {capacity}%",
     "format-alt": "{icon}  {time}",
     "format-full": "  {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip-format": "{time}"
+    "format-icons": [" ", " ", " ", " ", " "],
+    "tooltip-format": "{capacity}%"
   },
 
   "network": {
@@ -54,7 +57,7 @@
     "format-ethernet": " ",
     "format-disconnected": "󰤭 ",
     "tooltip-format": "{ifname}",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-wifi": "Network: {essid}\nSignal Strength: {signalStrength}%",
     "tooltip-format-ethernet": "{ifname}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
@@ -62,13 +65,13 @@
   },
 
   "bluetooth": { 
-    "format-disabled": " off",
-    "format-disconnected": "",
-    "format-connected": " {device_alias}",
+    "format-disabled": " OFF",
+    "format-disconnected": " ON",
+    "format-connected": " {device_battery_percentage}%",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "tooltip-format-connected": "{controller_alias}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t Battery: {device_battery_percentage}%",
     "on-click": "blueman-manager",
     "interval": 3
   },
@@ -86,7 +89,7 @@
     "exec": "~/.config/waybar/vpn_module.sh",
     "interval": 3,
     "return-type": "json",
-    "format": "🛡  {}",
+    "format": "🛡 {}",
     "tooltip": true,
   }
 }
