@@ -1,0 +1,6 @@
+gnome-keyring-daemon.service
+p11-kit-server.service
+pipewire-pulse.service
+pipewire.service
+wireplumber.service
+xdg-user-dirs.service
