@@ -16,7 +16,6 @@ epiphany
 ex-vi-compat
 firefox
 fzf
-gdm
 geoip
 geoip-database
 geoip-database-extra
@@ -80,6 +79,7 @@ libva-utils
 linux
 linux-firmware
 loupe
+luarocks
 malcontent
 man-db
 man-pages
@@ -91,6 +91,7 @@ network-manager-applet
 networkmanager
 networkmanager-vpnc
 noto-fonts
+nvim
 nwg-look
 openvpn
 orca

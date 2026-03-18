@@ -26,14 +26,21 @@ button {
     border-radius: 24px;
 }
 
+button:hover {
+    background: inherit;
+    color: @mauve;
+    border-top: 2px solid @mauve;
+}
+
 #workspaces button {
-    padding: 0 8px;
+    color: @subtext0;
 }
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
     color: @text;
     border-top: 2px solid @text;
+    border-bottom: 2px solid @text;
 }
 
 #pulseaudio,
