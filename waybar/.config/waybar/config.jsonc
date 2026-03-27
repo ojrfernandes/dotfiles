@@ -48,7 +48,7 @@
     "format-alt": "{icon}  {time}",
     "format-full": "  {capacity}%",
     "format-icons": [" ", " ", " ", " ", " "],
-    "tooltip-format": "{capacity}%"
+    "tooltip-format": "{capacity}%\n{time} left"
   },
 
   "network": {

@@ -28,8 +28,8 @@ button {
 
 button:hover {
     background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @text;
+    border-top: 2px solid @text;
 }
 
 #workspaces button {
