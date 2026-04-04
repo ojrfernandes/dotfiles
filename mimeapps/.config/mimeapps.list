@@ -1,0 +1,51 @@
+[Default Applications]
+
+# 🌐 Web
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+
+# 📄 Documents
+application/pdf=org.pwmt.zathura.desktop
+application/postscript=org.pwmt.zathura.desktop
+
+# 📝 Text
+text/plain=nvim.desktop
+
+# 🖼️ Images
+image/png=org.gnome.Loupe.desktop
+image/jpeg=org.gnome.Loupe.desktop
+image/webp=org.gnome.Loupe.desktop
+image/gif=org.gnome.Loupe.desktop
+
+# 🎨 Editing images
+image/svg+xml=org.gimp.GIMP.desktop
+
+# 🎵 Audio
+audio/mpeg=vlc.desktop
+audio/flac=vlc.desktop
+audio/ogg=vlc.desktop
+
+# 🎬 Video
+video/mp4=vlc.desktop
+video/x-matroska=vlc.desktop
+video/webm=vlc.desktop
+
+# 📁 File manager
+inode/directory=yazi.desktop
+
+# 🗜️ Archives
+application/zip=org.gnome.FileRoller.desktop
+application/x-7z-compressed=org.gnome.FileRoller.desktop
+application/x-tar=org.gnome.FileRoller.desktop
+
+# 📊 Office
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop
+
+# 🧠 Code
+text/x-python=nvim.desktop
+text/x-csrc=nvim.desktop
+text/x-c++src=nvim.desktop
+application/json=nvim.desktop
