@@ -8,6 +8,7 @@ x-scheme-handler/https=firefox.desktop
 # 📄 Documents
 application/pdf=org.pwmt.zathura.desktop
 application/postscript=org.pwmt.zathura.desktop
+application/djvu=org.pwmt.zathura.desktop
 
 # 📝 Text
 text/plain=nvim.desktop
