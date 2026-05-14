@@ -10,7 +10,7 @@ return {
 					auto_trigger = true, -- shows suggestions as you type
 					debounce = 75, -- ms delay before requesting suggestion
 					keymap = {
-						accept = "<Tab>", -- accept full suggestion
+						accept = false, -- accept full suggestion
 						accept_word = "<C-Right>", -- accept one word at a time
 						accept_line = "<C-Down>", -- accept one line at a time
 						next = "<M-]>", -- next suggestion

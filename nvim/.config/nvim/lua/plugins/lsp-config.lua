@@ -48,6 +48,11 @@ return {
 				},
 			})
 
+			-- Tell LSP servers about nvim-cmp's extended capabilities
+			vim.lsp.config("*", {
+				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			})
+
 			-- Set up LSP keymaps only when an LSP attaches to a buffer
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(event)
