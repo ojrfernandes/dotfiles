@@ -7,7 +7,7 @@ return {
 			require("copilot").setup({
 				suggestion = {
 					enabled = true,
-					auto_trigger = true, -- shows suggestions as you type
+					auto_trigger = false, -- shows suggestions as you type
 					debounce = 75, -- ms delay before requesting suggestion
 					keymap = {
 						accept = false, -- accept full suggestion
