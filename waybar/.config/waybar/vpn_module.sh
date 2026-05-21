@@ -19,8 +19,10 @@ fi
 
 # --- VPNC CHECK ---
 if pgrep vpnc >/dev/null; then
+
   PROFILE=$(grep "IPSec gateway" /var/run/vpnc/* 2>/dev/null | awk -F': ' '{print $2}' | head -n1)
   PROFILE=${PROFILE:-vpnc}
+
   echo "{\"text\":\"$PROFILE\", \"tooltip\":\"VPNC: $PROFILE\", \"class\":\"vpnc\"}"
   exit 0
 fi
@@ -34,6 +36,20 @@ if pgrep openconnect >/dev/null; then
   SERVER=${SERVER:-openconnect}
 
   echo "{\"text\":\"OpenConnect\", \"tooltip\":\"OpenConnect: $SERVER\", \"class\":\"openconnect\"}"
+  exit 0
+fi
+
+# --- NETWORKMANAGER FALLBACK ---
+VPN_CON=$(nmcli -t -f NAME,TYPE,STATE connection show --active 2>/dev/null \
+  | grep -i 'vpn\|wireguard' \
+  | grep ':activated' \
+  | cut -d':' -f1 \
+  | head -n1)
+
+if [ -n "$VPN_CON" ]; then
+  VPN_TYPE=$(nmcli -t -f NAME,TYPE connection show "$VPN_CON" 2>/dev/null \
+    | grep 'TYPE' | cut -d':' -f2)
+  echo "{\"text\":\"VPN ON\", \"tooltip\":\"$VPN_TYPE: $VPN_CON\", \"class\":\"vpn\"}"
   exit 0
 fi
 
