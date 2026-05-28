@@ -1,4 +1,3 @@
 *.log
 *.cache
-tmux/.tmux
 .luarc.json
