@@ -1,8 +1,8 @@
 -- Indentation
 vim.opt.expandtab = true -- spaces instead of tabs
-vim.opt.tabstop = 4 -- visual width of a tab character
+vim.opt.tabstop = 2 -- visual width of a tab character
 vim.opt.softtabstop = 4 -- spaces inserted when pressing Tab
-vim.opt.shiftwidth = 4 -- spaces used for auto-indent
+vim.opt.shiftwidth = 2 -- spaces used for auto-indent
 
 -- Line numbers
 vim.opt.number = true -- absolute line number on current line

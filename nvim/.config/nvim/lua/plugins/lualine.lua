@@ -5,18 +5,31 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = vim.g.active_lualine_theme or "auto",
-				globalstatus = true, -- single statusline for all windows
+				globalstatus = true,
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
-					statusline = { "neo-tree" }, -- cleaner look for the file tree
+					statusline = { "neo-tree" },
 				},
 			},
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { { "filename", path = 1 } }, -- relative path instead of just filename
-				lualine_x = { "lsp_status", "encoding", "filetype" },
+				lualine_c = { { "filename", path = 1 } },
+				lualine_x = {
+					{
+						function()
+							return require("remote-sshfs.statusline").component()
+						end,
+						cond = function()
+							local ok, connections = pcall(require, "remote-sshfs.connections")
+							return ok and connections.is_connected()
+						end,
+					},
+					"lsp_status",
+					"encoding",
+					"filetype",
+				},
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
 			},

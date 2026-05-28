@@ -34,7 +34,7 @@ return {
 			{ "<leader>t", group = "terminal" },
 			{ "<leader>n", group = "neo-tree" },
 			{ "<leader>c", group = "code (LSP)" },
-			{ "<leader>r", group = "rename" },
+			{ "<leader>r", group = "rename / remote" },
 			{ "<leader>d", group = "diagnostics" },
 			{ "<leader>cp", group = "copilot" },
 		})
