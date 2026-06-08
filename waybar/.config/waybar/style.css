@@ -1,10 +1,17 @@
 @import "mocha.css"; 
 
 * {
-    font-family: "MesloLGS Nerd Font Mono Bold";
+    font-family: "FontAwesome";
     font-size: 16px;
     min-height: 24px;
     font-weight: bold;
+}
+
+/* Force icon size for Nerd Font glyphs */
+.modules-left *,
+.modules-center *,
+.modules-right * {
+    font-size: 16px;
 }
 
 window#waybar {
