@@ -1,0 +1,7 @@
+IPSec gateway 146.134.0.14
+IPSec ID sdumont
+IPSec secret <CHANGEME>
+Xauth username jose.fernandes
+Xauth password <CHANGEME>
+Enable weak encryption
+Script /etc/vpnc/vpnc-script

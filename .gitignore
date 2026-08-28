@@ -1,3 +1,4 @@
 *.log
 *.cache
 .luarc.json
+vpnc/etc/vpnc/sdumont.conf
