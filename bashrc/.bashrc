@@ -15,8 +15,11 @@ export PATH="$HOME/.local/bin:$PATH"
 # My aliases
 alias la='ls -a'
 alias mount_hd='sudo mount -t ntfs-3g -o uid=$(id -u),gid=$(id -g),rw /dev/sda1 /mnt/HDD_2tb'
-alias vpnc_off='sudo vpnc-disconnect; sudo systemctl restart NetworkManager'
 alias bashrc='nvim ~/.bashrc && source ~/.bashrc'
+
+# Sdumont - Yorke tunnel
+alias open_tunnel='ssh -R 2223:login.sdumont.lncc.br:22 -N -f jfernandes@yorke.if.usp.br'
+alias check_tunnel="ps -ef | grep '[s]sh'"
 
 # Starship
 eval "$(starship init bash)"

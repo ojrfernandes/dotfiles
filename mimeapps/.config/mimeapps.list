@@ -50,3 +50,4 @@ text/x-python=nvim.desktop
 text/x-csrc=nvim.desktop
 text/x-c++src=nvim.desktop
 application/json=nvim.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
