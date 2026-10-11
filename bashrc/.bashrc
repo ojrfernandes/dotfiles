@@ -16,6 +16,7 @@ export PATH="$HOME/.local/bin:$PATH"
 alias la='ls -a'
 alias mount_hd='sudo mount -t ntfs-3g -o uid=$(id -u),gid=$(id -g),rw /dev/sda1 /mnt/HDD_2tb'
 alias bashrc='nvim ~/.bashrc && source ~/.bashrc'
+alias tcabrcl='~/.venvs/pyhoca-legacy/bin/python3 /usr/bin/pyhoca-cli --clean-sessions --server tcabrcl.if.usp.br'
 
 # Sdumont - Yorke tunnel
 alias open_tunnel='ssh -R 2223:login.sdumont.lncc.br:22 -N -f jfernandes@yorke.if.usp.br'
