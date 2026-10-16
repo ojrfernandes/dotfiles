@@ -1,3 +1,4 @@
+dms.service
 gnome-keyring-daemon.service
 p11-kit-server.service
 pipewire-pulse.service

@@ -4,4 +4,4 @@ mullvad-daemon.service
 NetworkManager-dispatcher.service
 NetworkManager-wait-online.service
 NetworkManager.service
-sddm.service
+greetd.service
